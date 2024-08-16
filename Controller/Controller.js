@@ -83,8 +83,8 @@ const getCreditData = async (req, res) => {
         // };
 
         // Define the base output directories and number of days back
-        const outputDir = 'D:/fenil/Update-Output'; // Directory where the CSV files will be stored
-        const jsonOutputDir = 'D:/fenil/Update-JSON-store'; // Directory where the JSON files will be stored
+        const outputDir = 'D:/Update-Output'; // Directory where the CSV files will be stored
+        const jsonOutputDir = 'D:/Update-JSON-store'; // Directory where the JSON files will be stored
         // const specificDate = "2024-08-15"; // Date to look for
 
         // Define the match criteria
@@ -310,8 +310,8 @@ const getInvoicesData = async (date) => {
         };
 
         // Define the base output directories and number of days back
-        const outputDir = 'D:/fenil/2Invoice-Update-Output'; // Directory where the CSV files will be stored
-        const jsonOutputDir = 'D:/fenil/2Invoice-Update-JSON-store'; // Directory where the JSON files will be stored
+        const outputDir = 'D:/2Invoice-Update-Output'; // Directory where the CSV files will be stored
+        const jsonOutputDir = 'D:/2Invoice-Update-JSON-store'; // Directory where the JSON files will be stored
         const daysBack = "2024-08-15"; // Number of days to look back
 
         // Start processing the files from FTP
@@ -529,8 +529,8 @@ const getInvoicesData2 = async (req, res) => {
         };
 
         // Define the base output directories and number of days back
-        const outputDir = 'D:/fenil/1Invoice-Update-Output'; // Directory where the CSV files will be stored
-        const jsonOutputDir = 'D:/fenil/1Invoice-Update-JSON-store'; // Directory where the JSON files will be stored
+        const outputDir = 'D:/1Invoice-Update-Output'; // Directory where the CSV files will be stored
+        const jsonOutputDir = 'D:/1Invoice-Update-JSON-store'; // Directory where the JSON files will be stored
         const daysBack = "2024-08-15"; // Number of days to look back
 
         // Start processing the files from FTP

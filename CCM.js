@@ -161,8 +161,8 @@ const ftpConfig = {
 };
 
 // Define the base output directories and number of days back
-const outputDir = 'D:/fenil/Update-Output'; // Directory where the CSV files will be stored
-const jsonOutputDir = 'D:/fenil/Update-JSON-store'; // Directory where the JSON files will be stored
+const outputDir = 'D:/Update-Output'; // Directory where the CSV files will be stored
+const jsonOutputDir = 'D:/Update-JSON-store'; // Directory where the JSON files will be stored
 const specificDate = "2024-08-15"; // Number of days to look back
 
 // Define the match criteria
