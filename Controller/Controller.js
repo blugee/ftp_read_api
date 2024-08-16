@@ -233,7 +233,7 @@ const getInvoicesData = async (date) => {
                             existingData = JSON.parse(fs.readFileSync(jsonFilePath, 'utf8'));
                         }
                         existingData.push(jsonObject);
-                        fs.writeFileSync(jsonFilePath, JSON.stringify(existingData, null, 2));
+                        // fs.writeFileSync(jsonFilePath, JSON.stringify(existingData, null, 2));
                         console.log(`JSON file updated: ${jsonFilePath}`);
                     } else {
                         console.log('No matching MOB3 rows found in the CSV:', fileName);
@@ -452,7 +452,7 @@ const getInvoicesData2 = async (req, res) => {
                             existingData = JSON.parse(fs.readFileSync(jsonFilePath, 'utf8'));
                         }
                         existingData.push(jsonObject);
-                        fs.writeFileSync(jsonFilePath, JSON.stringify(existingData, null, 2));
+                        // fs.writeFileSync(jsonFilePath, JSON.stringify(existingData, null, 2));
                         console.log(`JSON file updated: ${jsonFilePath}`);
                     } else {
                         console.log('No matching MOB3 rows found in the CSV:', fileName);
