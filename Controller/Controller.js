@@ -441,10 +441,10 @@ const getInvoicesData2 = async (req, res) => {
                         });
 
                         // Save JSON to file
-                        const jsonFolder = path.join(jsonOutputBasePath, "exxonmobil");
+                        const jsonFolder = path.join(jsonOutputBasePath, "citigo");
                         createDirectories(jsonFolder);
 
-                        const jsonFileName = `exxonmobil_invoice_${defaultDate}.json`;
+                        const jsonFileName = `citigo_invoice_${defaultDate}.json`;
                         const jsonFilePath = path.join(jsonFolder, jsonFileName);
 
                         // Append data to existing file or create a new file
@@ -547,9 +547,6 @@ const getInvoices = async (req, res) => {
     let date = req.query.date;
     let exxonmobilData = await getInvoicesData(date);
     let citigoData = await getInvoicesData2(date);
-
-    console.log("exxonmobilData", exxonmobilData)
-    console.log("exxonmobilData", citigoData)
 
     res.status(200).json({ exxonmobil: exxonmobilData, citigo: citigoData }); // Send the result as JSON response
 }
