@@ -319,6 +319,7 @@ const getInvoicesData = async (date) => {
         return existingData;
 
     } catch (error) {
+        console.log(error)
         res.status(500).json({ error: 'An error occurred while processing the request.' });
     }
 }
@@ -537,17 +538,25 @@ const getInvoicesData2 = async (req, res) => {
 
         return existingData;
     } catch (error) {
+        console.log(error)
         res.status(500).json({ error: 'An error occurred while processing the request.' });
     }
 }
 
 const getInvoices = async (req, res) => {
+    try {
 
-    let date = req.query.date;
-    let exxonmobilData = await getInvoicesData(date);
-    let citigoData = await getInvoicesData2(date);
 
-    res.status(200).json({ exxonmobil: exxonmobilData, citigo: citigoData }); // Send the result as JSON response
+
+        let date = req.query.date;
+        let exxonmobilData = await getInvoicesData(date);
+        let citigoData = await getInvoicesData2(date);
+
+        res.status(200).json({ exxonmobil: exxonmobilData, citigo: citigoData }); // Send the result as JSON response
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({ error: 'An error occurred while processing the request.' });
+    }
 }
 
 module.exports = { getCreditData, getInvoices };
