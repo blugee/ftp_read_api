@@ -325,7 +325,6 @@ const getInvoicesData = async (date) => {
 
 const getInvoicesData2 = async (req, res) => {
     try {
-
         // Function to create directories if they do not exist
         function createDirectories(folderPath) {
             if (!fs.existsSync(folderPath)) {
